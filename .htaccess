@@ -1,0 +1,36 @@
+RewriteEngine On
+
+RewriteRule	^admin$	admin.rb	[L,QSA]
+RewriteRule	^root$ admin.rb	[L,QSA]
+RewriteRule	^upload$ admin.rb?module=upload [L,QSA]
+
+RewriteRule	^images$	admin.rb?dir=images/	[L,QSA]
+RewriteRule	^images/destroy$	admin.rb?dir=images/&candestroy=yes	[L,QSA]
+RewriteRule     ^images/destroy/(.*)$ admin.rb?module=destroyer&filepath=images/$1 [L,QSA]
+
+RewriteRule     ^archives$ admin.rb?dir=archives/    [L,QSA]
+RewriteRule     ^archives/destroy$ admin.rb?dir=archives/&candestroy=yes     [L,QSA]
+RewriteRule     ^archives/destroy/(.*)$ admin.rb?module=destroyer&filepath=archives/$1 [L,QSA]
+
+RewriteRule     ^others$ admin.rb?dir=others/    [L,QSA]
+RewriteRule     ^others/destroy$ admin.rb?dir=others/&candestroy=yes     [L,QSA]
+RewriteRule	^others/destroy/(.*)$ admin.rb?module=destroyer&filepath=others/$1 [L,QSA]
+
+RewriteRule     ^sounds$ admin.rb?dir=sounds/    [L,QSA]
+RewriteRule     ^sounds/destroy$ admin.rb?dir=sounds/&candestroy=yes     [L,QSA]
+RewriteRule     ^sounds/destroy/(.*)$ admin.rb?module=destroyer&filepath=sounds/$1 [L,QSA]
+
+RewriteRule     ^videos$ admin.rb?dir=videos/    [L,QSA]
+RewriteRule     ^videos/destroy$ admin.rb?dir=videos/&candestroy=yes     [L,QSA]
+RewriteRule     ^videos/destroy/(.*)$ admin.rb?module=destroyer&filepath=videos/$1 [L,QSA]
+
+        <Files *>
+                AuthUserFile /var/www/temp.khemael.net/admin/.htpasswd
+                AuthGroupFile /dev/null
+                AuthName "Administration"
+                AuthType Basic
+                <LIMIT GET POST>
+                        require valid-user
+                </LIMIT>
+        </Files>
+
