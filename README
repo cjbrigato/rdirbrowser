@@ -15,4 +15,27 @@ Rdirbrowser - Mini Files-Repository management
 . Requirements :
 
 	- The "admin" (or whatever) directory should be placed under the root of your file repo (=basedir)
-	- This is written for user with mod_ruby. To be used as cgi, you should add shebang to admin.rb and uploader.rb (#!/usr/bin/ruby)
+	- This is written for use with mod_ruby. To be used as cgi, you should add shebang to admin.rb and uploader.rb (#!/usr/bin/ruby)
+	
+	
+. Know Issues :
+
+	- Destroyer directory traversal vulnerability (lister is OK)
+	- Can't upload files with whitespaces (will be uploaded to root)
+	- Lack of mimetypes implementation
+
+. Todo :
+
+	--> Correct CSS Tabs (body id=tabX)
+	--> Implement the "Delete/Normal" Mode in TABS
+	- Sanitize "filepath" for destroyer => Directory Traversal vulnerability
+	- Show file weight
+	- Create Script to create dirs
+	- Create readme for basic conf info
+	- Sanitize whitespaces and special chars in file => Bug With uploader/destroyer
+	- Implement LISTDIR mimetypes (for imgs etc)
+	- Implement UPLOADER mimetypes (for auto-move of file)
+	- Better Uploader result page.
+	- Better Upload page
+	- More config options
+	- Rework CSS/layout ?
