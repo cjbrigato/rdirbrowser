@@ -11,6 +11,7 @@ Rdirbrowser - Mini Files-Repository management
 	- chmod +x admin.rb uploader.rb
 	- edit .htpasswd
 	- edit .htaccess (for .htpasswd path)
+	- Access http://your-repo/your-admindir/root
 
 . Requirements :
 
