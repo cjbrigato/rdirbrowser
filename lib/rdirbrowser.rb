@@ -92,7 +92,7 @@ class Rdirbrowser
 		notypeicon = '<img src="'+$admindir+'/icons/page_white.png" />'
 
 		files.each do |file|
-			unless file == "." or file == ".." or file == "admin" or file == "index.html"
+			unless file == "." or file == ".." or file == $admindir or file == "index.html"
 				
 				type = self.getmimetype(file)
 

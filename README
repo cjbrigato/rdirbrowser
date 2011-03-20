@@ -1,0 +1,18 @@
+======
+
+Rdirbrowser - Mini Files-Repository management
+
+======
+
+. Instructions :
+
+	- git clone git://github.com/khemael/rdirbrowser.git
+	- edit config/rdirbrowser.conf
+	- chmod +x admin.rb uploader.rb
+	- edit .htpasswd
+	- edit .htaccess (for .htpasswd path)
+
+. Requirements :
+
+	- The "admin" (or whatever) directory should be placed under the root of your file repo (=basedir)
+	- This is written for user with mod_ruby. To be used as cgi, you should add shebang to admin.rb and uploader.rb (#!/usr/bin/ruby)
