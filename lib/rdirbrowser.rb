@@ -148,7 +148,7 @@ class Rdirbrowser
 
 	def self.htmlfooter
         	puts "<hr>"
-        	puts '<h4 align=right><span class="alt">A Ruby Browser by <a href="http://blog.khemael.net">Khemael</a> - Licensed under <a href="http://sam.zoy.org/wtfpl/">WTFPL</a></span></h4>'
+        	puts '<h4 align=right><span class="alt">A Ruby Browser by <a href="http://blog.khemael.net">Khemael</a> - Icons by <a href="http://www.famfamfam.com/">famfamfam</a> - Licensed under <a href="http://sam.zoy.org/wtfpl/">WTFPL</a></span></h4>'
         	puts "</div>"
         	puts "</body></html>"
 	end
