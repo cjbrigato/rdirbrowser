@@ -13,12 +13,14 @@ Rdirbrowser - Mini Files-Repository management
 	- chmod +x admin.rb uploader.rb
 	- edit .htpasswd
 	- edit .htaccess (for .htpasswd path)
+	- Set mod_ruby safelevel to 0 (RubySafeLevel 0 in module configuration)
 	- Access http://your-repo/your-admindir/root
 
 . Requirements :
 
 	- The "admin" (or whatever) directory should be placed under the root of your file repo (=basedir)
 	- This is written for use with mod_ruby. To be used as cgi, you should add shebang to admin.rb and uploader.rb (#!/usr/bin/ruby)
+	- Whatever you're using (CGI or Mod_Ruby), ruby safe level should be set to 0, or you won't be allowed to chdir, thus having 503's.
 	
 	
 . Know Issues :
